@@ -1,0 +1,43 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Video Resource OpenApi",
+        "contact": {
+            "name": "Hou jian dong",
+            "url": "http://lzad.cc",
+            "email": "houjiandong@lzad.cc"
+        },
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "http://192.168.1.156/api/",
+            "description": "DongGe localhost server"
+        }
+    ],
+    "paths": {
+        "/login": {
+            "post": {
+                "tags": [
+                    "Projects"
+                ],
+                "summary": "用户登录",
+                "description": "用户登录接口",
+                "operationId": "login",
+                "requestBody": {
+                    "request": "email",
+                    "description": "登录邮箱",
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "登录成功，返回token"
+                    },
+                    "401": {
+                        "description": "用户验证失败"
+                    }
+                }
+            }
+        }
+    }
+}
